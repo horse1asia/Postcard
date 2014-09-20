@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
     @IBOutlet weak var messageLabel: UILabel!
     
     @IBOutlet weak var enterNameTextField: UITextField!
@@ -30,9 +33,18 @@ class ViewController: UIViewController {
 
     @IBAction func sendMailButtonPressed(sender: UIButton) {
        //Code will evaluate when we pressed the button.
+        
+        //new code for challenge portion
+        nameLabel.hidden = false
+        nameLabel.text = enterNameTextField.text
+        nameLabel.textColor = UIColor.blueColor()
+        
+        enterNameTextField.text = ""
+        
+        
+        
         messageLabel.hidden = false
         //messageLabel.text = "Hello"
-        
         messageLabel.text = enterMessageTextField.text
         
         //reset the text field after you press the submit button.
